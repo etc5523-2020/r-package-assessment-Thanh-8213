@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# icecovid19
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of icecovid19 is to ...
+
+## Installation
+
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
+```
+## Examples
+
+
+```{r library}
+library(icecovid19)
+library(tibble)
+library(DT)
+```
+
+### Dataset example: Data_total
+```{r data}
+as.tibble(data_total)
+
+```
+
+

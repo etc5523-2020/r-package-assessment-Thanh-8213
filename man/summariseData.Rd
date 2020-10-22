@@ -2,19 +2,26 @@
 % Please edit documentation in R/summariseData.R
 \name{summariseData}
 \alias{summariseData}
-\alias{SummarizeData}
-\title{Summarise data to display in a data table}
+\alias{summarizeData}
+\title{Summarise data to fewer rows}
 \usage{
-summariseData(df, groupBy)
+summariseData(data, groupBy)
 }
 \arguments{
-\item{df}{is data_total
-groupBy is the column user want to summarise by}
+\item{groupBy}{is the column user want to summarise by}
+
+\item{df}{is data_total}
 }
 \value{
 A data table that contain the summarise data of cases for the variable that user
 choose to summarise.
+It will contain 4 columns: One for grouping variable, three for confirmed, estimated
+recovered and deceased cases
 }
 \description{
-Summarise data to display in a data table
+Summarise data creates a new data frame. It will have one row for each combination
+of grouping variables.
+}
+\examples{
+summariseData(data_total, date))
 }
