@@ -15,25 +15,12 @@
 #' @return 
 #' Export a slider input in Shiny app.
 #'
-#' @examples
-#' 
-#'library(shiny)
-#' ui <-   fluidPage(
-#'  fluidRow(
-#'    column(
-#'      sliderDateinput(inputId  = "timeSlider",x = data_total$date),
-#'      width = 12)
-#'  )
-#')
-#'server <- function(input, output) {
-#'}
-#' shinyApp(ui = ui, server = server)
+#' @export
 
-sliderDateinput <- function(inputId, 
-                            label = "Select date",
+sliderDateinput <- function(inputId,
                             x, ...){
   shiny::sliderInput(inputId = inputId, 
-                     label = label,
+                     label = "Select date",
                      min = min(x),
                      max = max(x),
                      value = max(x),

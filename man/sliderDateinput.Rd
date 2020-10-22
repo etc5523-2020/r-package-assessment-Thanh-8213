@@ -4,7 +4,7 @@
 \alias{sliderDateinput}
 \title{This function create the slider input in shiny app}
 \usage{
-sliderDateinput(inputId, label = "Select date", x, ...)
+sliderDateinput(inputId, x, ...)
 }
 \arguments{
 \item{inputId}{The input slot that will be used to access the value.}
@@ -21,18 +21,4 @@ Constructs a slider widget to select a date value from a range of value.
 }
 \details{
 Title
-}
-\examples{
-
-library(shiny)
-ui <-   fluidPage(
- fluidRow(
-   column(
-     sliderDateinput(inputId  = "timeSlider",x = data_total$date),
-     width = 12)
- )
-)
-server <- function(input, output) {
-}
-shinyApp(ui = ui, server = server)
 }

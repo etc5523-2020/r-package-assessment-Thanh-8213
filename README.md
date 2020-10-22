@@ -50,3 +50,33 @@ as.tibble(data_total)
 #> 10 Afghanistan      2020-01-31  33.9  67.7         0        0         0
 #> # ... with 48,682 more rows
 ```
+
+### Function example
+
+#### summariseData function
+
+``` r
+as_tibble(summariseData(data_total, date))
+#> # A tibble: 259 x 4
+#>    date       Confirmed Deceased `Estimated Recoveries`
+#>    <date>         <dbl>    <dbl>                  <dbl>
+#>  1 2020-01-22       555       17                     28
+#>  2 2020-01-23       654       18                     30
+#>  3 2020-01-24       941       26                     36
+#>  4 2020-01-25      1434       42                     39
+#>  5 2020-01-26      2118       56                     52
+#>  6 2020-01-27      2927       82                     61
+#>  7 2020-01-28      5578      131                    107
+#>  8 2020-01-29      6167      133                    126
+#>  9 2020-01-30      8235      171                    143
+#> 10 2020-01-31      9927      213                    222
+#> # ... with 249 more rows
+```
+
+#### getSummaryDT function
+
+``` r
+getSummaryDT(data_total, `Country/Region`)
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />

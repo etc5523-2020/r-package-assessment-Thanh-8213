@@ -1,13 +1,15 @@
 #'Add label for the leaflet map
 #'
-#'@description
-#'This function create HTML label for the types of cases. When mouse is hovered
-#'on leaflet map, the label will appear and give addition details.  
+#' @description
+#' This function create HTML label for the types of cases. When mouse is hovered
+#' on leaflet map, the label will appear and give addition details.  
 #'
-#'@return
-#'New column named "label" is created in the data table.
+#' @return
+#' New column named "label" is created in the data table.
 #' @param data 
-#' Data need to be data_total
+#' Dataframe that contain Country/Region, confirmed, deceased and recovered columns
+#' 
+#' @export
 
 addLabel <- function(data) {
   data$Label <- paste0(

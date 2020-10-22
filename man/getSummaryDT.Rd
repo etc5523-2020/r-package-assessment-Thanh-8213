@@ -4,7 +4,7 @@
 \alias{getSummaryDT}
 \title{Function to draw the summary table}
 \usage{
-getSummaryDT(data, groupBy, selectable = FALSE)
+getSummaryDT(data, groupBy)
 }
 \arguments{
 \item{data}{Data need to be data_total}
@@ -17,7 +17,4 @@ A summary data table will be created.
 \description{
 This function create a summary data table that shows the detailed
 number of confirmed, deceased and Estimated recovered cases.
-}
-\examples{
-getSummaryDT(data_total, date)
 }

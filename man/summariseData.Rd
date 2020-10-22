@@ -8,9 +8,9 @@
 summariseData(data, groupBy)
 }
 \arguments{
-\item{groupBy}{is the column user want to summarise by}
+\item{data}{is data_total}
 
-\item{df}{is data_total}
+\item{groupBy}{groupBy is the column user want to summarise by}
 }
 \value{
 A data table that contain the summarise data of cases for the variable that user
@@ -21,7 +21,4 @@ recovered and deceased cases
 \description{
 Summarise data creates a new data frame. It will have one row for each combination
 of grouping variables.
-}
-\examples{
-summariseData(data_total, date))
 }

@@ -2,16 +2,17 @@
 #' 
 #'@aliases SummarizeData_newdaily
 #'
-#'@param
-#'data is data_total_newdaily
-#'groupBy is the column user want to 
+#'@param data
+#' Data must contain date and value columns.
 #'
 #'@return 
-#'A data table that contain the summarise data of cases for the variable that user 
-#'choose to summarise.
+#'A data table that contain the summarise data of cases for the date variable.
 #'
-
-
+#'@import
+#'dplyr
+#'magrittr
+#'
+#'@export
 summariseData_newdaily <- function(data){
   data %>%
     group_by(date) %>%

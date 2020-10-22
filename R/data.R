@@ -13,6 +13,7 @@
 #'- **deceased**: The number of deceased cases.
 #'- **recovered**: The number of recovered cases.
 #'
+#'@name data_total
 #'@source [John Hopkins Github](https://github.com/CSSEGISandData/COVID-19)
 
 "data_total"
@@ -34,6 +35,7 @@
 #'"New daily cases","New death cases","New recovered cases")`
 #'- **value** - The number of cases
 #'
+#'@name data_total_newdaily
 #'@source [John Hopkins Github](https://github.com/CSSEGISandData/COVID-19)
 #'
 "data_total_newdaily"

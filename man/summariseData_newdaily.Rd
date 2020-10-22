@@ -8,12 +8,10 @@
 summariseData_newdaily(data)
 }
 \arguments{
-\item{data}{is data_total_newdaily
-groupBy is the column user want to}
+\item{data}{Data must contain date and value columns.}
 }
 \value{
-A data table that contain the summarise data of cases for the variable that user
-choose to summarise.
+A data table that contain the summarise data of cases for the date variable.
 }
 \description{
 #' SummariseData_newdaily daily new cases

@@ -7,7 +7,7 @@
 addLabel(data)
 }
 \arguments{
-\item{data}{Data need to be data_total}
+\item{data}{Dataframe that contain Country/Region, confirmed, deceased and recovered columns}
 }
 \value{
 New column named "label" is created in the data table.

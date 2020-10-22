@@ -5,9 +5,9 @@
 #'Summarise data creates a new data frame. It will have one row for each combination 
 #'of grouping variables. 
 #'
-#'@param
-#'df is data_total
-#'@param
+#' @param data
+#'is data_total
+#' @param groupBy 
 #'groupBy is the column user want to summarise by
 #'
 #'@return 
@@ -15,10 +15,11 @@
 #'choose to summarise.   
 #'It will contain 4 columns: One for grouping variable, three for confirmed, estimated 
 #'recovered and deceased cases
-#'@examples
-#'summariseData(data_total, date))
-
-
+#'@import
+#'dplyr
+#'magrittr
+#'
+#'@export
 summariseData <- function(data, groupBy) {
   data %>%
     group_by({{groupBy}}) %>%

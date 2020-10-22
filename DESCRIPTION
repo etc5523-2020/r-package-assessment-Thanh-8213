@@ -6,13 +6,14 @@ Authors@R:
            family = "Nguyen Dang",
            role = c("aut", "cre"),
            email = "dngu0079@student.monash.edu")
-Description: Provides dataset and functions for use in crafting shiny application
-    to track the evolution of COVID19.
+Description: Provides dataset and functions for use in crafting shiny application to track the evolution of COVID19.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
 Imports: 
     shiny,
     dplyr,
@@ -23,6 +24,6 @@ Imports:
     leaflet,
     scales,
     plotly,
-    tibble
-Depends: 
-    R (>= 2.10)
+    tibble,
+    magrittr,
+    htmltools

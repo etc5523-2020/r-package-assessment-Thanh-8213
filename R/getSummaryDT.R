@@ -11,12 +11,15 @@
 #' @description This function create a summary data table that shows the detailed 
 #' number of confirmed, deceased and Estimated recovered cases. 
 #' 
+#' @import 
+#' DT
 #' @return A summary data table will be created.
 #' 
-#' @examples 
-#' getSummaryDT(data_total, date)
+#' 
+#' @export
 
-getSummaryDT <- function(data, groupBy, selectable = FALSE) {
+
+getSummaryDT <- function(data, groupBy) {
   datatable(
     na.omit(summariseData(data, {{groupBy}})),
     caption = htmltools::tags$caption("Summary of Worldwide COVID19", style = "color:#002366; font-size: 22px; text-align:left"),
