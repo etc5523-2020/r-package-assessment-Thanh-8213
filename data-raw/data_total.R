@@ -46,6 +46,7 @@ data_total <- data_confirmed_sub %>%
   left_join(data_deceased_sub,  by = c("Country/Region", "date")) %>% 
   ungroup() %>%
   mutate(date = as.Date(date, "%m/%d/%y")) %>%
-  select(c("Country/Region", "date", "Lat", "Long", "confirmed", "deceased", "recovered"))
+  select(c("Country/Region", "date", "Lat", "Long", "confirmed", "deceased", "recovered")) %>%
+  as.tibble
 
 usethis::use_data(data_total, overwrite = TRUE)
