@@ -1,4 +1,4 @@
-#'Add label for the leaflet map
+#' Add label for the leaflet map
 #'
 #' @description
 #' This function create HTML label for the types of cases. When mouse is hovered
@@ -24,7 +24,4 @@ addLabel <- function(data) {
   
   return(data)
 }
-
-
-
 

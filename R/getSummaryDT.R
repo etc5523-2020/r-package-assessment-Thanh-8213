@@ -1,5 +1,3 @@
-
-
 #' Function to draw the summary table
 #' 
 #' @param data 
@@ -14,8 +12,6 @@
 #' @import 
 #' DT
 #' @return A summary data table will be created.
-#' 
-#' 
 #' @export
 
 
