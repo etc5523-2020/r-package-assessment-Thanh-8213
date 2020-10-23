@@ -19,7 +19,7 @@
 "data_total"
 
 
-#' Data for new cases of COVID19 from 22/01/2020 to 06/10/2020
+#'Data for new cases of COVID19 from 22/01/2020 to 06/10/2020
 #' 
 #'A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020.
 #'Data is in longer format, with variable vars contains 6 types of cases: Confirmed, deceased, recovered, new daily confirmed,

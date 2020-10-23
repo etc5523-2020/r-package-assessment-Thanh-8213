@@ -6,7 +6,7 @@
 #'of grouping variables. 
 #'
 #' @param data
-#'is data_total
+#' data must contain confirmed, deceased and recovered columns
 #' @param groupBy 
 #'groupBy is the column user want to summarise by
 #'
@@ -20,10 +20,10 @@
 #'magrittr
 #'tibble
 #'
-#'@examples 
-#'summariseData(data_total, date)
-#'
 #'@export
+#'
+#'
+
 summariseData <- function(data, groupBy) {
   data %>%
     group_by({{groupBy}}) %>%

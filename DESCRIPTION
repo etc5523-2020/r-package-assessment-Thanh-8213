@@ -29,5 +29,6 @@ Imports:
     htmltools
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr

@@ -41,7 +41,6 @@ library(DT)
 ### Dataset example: Data_total
 ```{r data}
 as.tibble(data_total)
-
 ```
 
 

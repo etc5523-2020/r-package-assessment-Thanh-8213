@@ -20,12 +20,6 @@ devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
 
 ## Examples
 
-``` r
-library(icecovid19)
-library(tibble)
-library(DT)
-```
-
 ### Dataset example: Data\_total
 
 ``` r

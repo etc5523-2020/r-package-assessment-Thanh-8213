@@ -1,7 +1,5 @@
 #' This function create the slider input in shiny app
 #' 
-#' 
-#' Title
 #' @description
 #' Constructs a slider widget to select a date value from a range of value.
 #' @param inputId 

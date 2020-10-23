@@ -19,6 +19,3 @@ Export a slider input in Shiny app.
 \description{
 Constructs a slider widget to select a date value from a range of value.
 }
-\details{
-Title
-}
