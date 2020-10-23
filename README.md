@@ -47,6 +47,8 @@ as.tibble(data_total)
 
 ### Function example
 
+Here are some example of the functions in this package:
+
 #### summariseData function
 
 ``` r

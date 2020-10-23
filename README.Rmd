@@ -13,6 +13,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r library, echo = FALSE}
+library(icecovid19)
+library(tibble)
+library(DT)
+```
+
 # icecovid19
 
 <!-- badges: start -->
@@ -31,21 +37,13 @@ devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
 ```
 ## Examples
 
-
-```{r library}
-library(icecovid19)
-library(tibble)
-library(DT)
-```
-
 ### Dataset example: Data_total
 ```{r data}
 as.tibble(data_total)
 ```
 
-
 ### Function example
-
+Here are some example of the functions in this package:
 
 #### summariseData function
 ```{r}
@@ -53,6 +51,8 @@ as_tibble(summariseData(data_total, date))
 ```
 
 #### getSummaryDT function
+
+
 ```{r}
 getSummaryDT(data_total, `Country/Region`)
 ```
