@@ -23,5 +23,7 @@ Summarise data creates a new data frame. It will have one row for each combinati
 of grouping variables.
 }
 \examples{
+\donttest{
 summariseData(data_total, date)
+}
 }

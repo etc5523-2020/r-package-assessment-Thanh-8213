@@ -19,6 +19,8 @@ This function create a summary data table that shows the detailed
 number of confirmed, deceased and Estimated recovered cases.
 }
 \examples{
+\donttest{ 
 getSummaryDT(data_total, date)
+}
 
 }

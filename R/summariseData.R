@@ -19,8 +19,10 @@
 #'dplyr
 #'magrittr
 #'tibble
-#'@examples summariseData(data_total, date)
-
+#'@examples
+#'\donttest{
+#' summariseData(data_total, date)
+#' }
 #'@export
 #'
 #'
