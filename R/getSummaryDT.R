@@ -12,7 +12,8 @@
 #' @import 
 #' DT
 #' @return A summary data table will be created.
-#'
+#' @examples getSummaryDT(data_total, date)
+#' 
 #' @export
 
 

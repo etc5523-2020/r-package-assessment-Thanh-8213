@@ -19,7 +19,8 @@
 #'dplyr
 #'magrittr
 #'tibble
-#'
+#'@examples summariseData(data_total, date)
+
 #'@export
 #'
 #'
