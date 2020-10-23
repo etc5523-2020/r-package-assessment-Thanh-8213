@@ -18,6 +18,10 @@
 #'@import
 #'dplyr
 #'magrittr
+#'tibble
+#'
+#'@examples 
+#'summariseData(data_total, date)
 #'
 #'@export
 summariseData <- function(data, groupBy) {
@@ -28,7 +32,7 @@ summariseData <- function(data, groupBy) {
       "Deceased"             = sum(deceased, na.rm = T),
       "Estimated Recoveries" = sum(recovered, na.rm = T)
     ) %>%
-    as.data.frame()
+    as_tibble()
 }
 
 summarizeData <- summariseData

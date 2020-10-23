@@ -22,3 +22,7 @@ recovered and deceased cases
 Summarise data creates a new data frame. It will have one row for each combination
 of grouping variables.
 }
+\examples{
+summariseData(data_total, date)
+
+}

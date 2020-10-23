@@ -27,3 +27,7 @@ Imports:
     tibble,
     magrittr,
     htmltools
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

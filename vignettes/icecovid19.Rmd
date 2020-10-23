@@ -1,0 +1,70 @@
+---
+title: "Tracking the evolution of the pandemic"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tracking the evolution of the pandemic}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+## Data description
+This packages contain a dashboard shows recent development of the COVID19 pandemic. ]
+
+This package contain 2 dataset: `data_total` and `data_total_newdaily`. The data is downloaded from [Johns HopkinsCSSE](https://github.com/CSSEGISandData/COVID-19a). Both datasets contain the information about the spreading of the COVID19 pandemic. 
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6.5
+)
+```
+
+```{r setup}
+library(icecovid19)
+library(tibble)
+library(ggplot2)
+library(dplyr)
+
+```
+
+### data_total dataset
+
+data_total is a dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020, along with the latitude and longitude of the region in which cases were recorded.  
+There are 3 type of cases: Confirmed, deceased and recoveredIt can be accessed via 
+```{r}
+library(icecovid19)
+as_tibble(data_total)
+```
+
+#### Exploration of the data
+
+Evolution of the pandemic in Australia
+
+```{r}
+data_total %>% filter(`Country/Region` == "Australia") %>%
+  ggplot(aes(x = date, y = confirmed))+
+  geom_line(color = "steelblue", alpha = 0.7, size = 2)+
+  ggtitle("Evolution of COVID19 in Australia")+
+  xlab("Date")+
+  ylab("Confirmed cases (person)")+
+  theme_bw()
+```
+
+### data_total_newdaily
+Data for new cases of COVID19 from 22/01/2020 to 06/10/2020
+ 
+A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020. Data is in longer format, with variable var contains 6 types of cases: Confirmed, deceased, recovered, new daily confirmed, new daily death and new daily recovered.
+
+
+#### Exploration of the data
+```{r}
+data_total_newdaily %>% filter(`Country/Region` == "Australia") %>%
+  ggplot(aes(x = date, y = value, color = var))+
+  geom_line()+
+  ggtitle("Evolution of COVID19 in Australia")+
+  xlab("Date")+
+  ylab("Confirmed cases (person)")+
+  theme_bw()
+```

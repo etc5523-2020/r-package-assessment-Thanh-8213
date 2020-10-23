@@ -23,7 +23,7 @@ A tibble with 48692 observations and 7 variables
 data_total
 }
 \description{
-A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020.
+A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020 as well as the date and the region in which cases were recored.
 There are 3 type of cases: Confirmed, deceased and recovered
 }
 \keyword{datasets}

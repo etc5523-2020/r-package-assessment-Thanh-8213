@@ -18,3 +18,6 @@ A summary data table will be created.
 This function create a summary data table that shows the detailed
 number of confirmed, deceased and Estimated recovered cases.
 }
+\examples{
+getSummaryDT(data_total, date)
+}

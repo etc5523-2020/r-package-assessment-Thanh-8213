@@ -22,8 +22,8 @@ A tibble with 292152 observations and 6 variables
 data_total_newdaily
 }
 \description{
-#'#'A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020.
-There are 6 type of cases: Confirmed, deceased, recovered, new daily confirmed,
-new daily death and new daily recovered
+A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020.
+Data is in longer format, with variable vars contains 6 types of cases: Confirmed, deceased, recovered, new daily confirmed,
+new daily death and new daily recovered.
 }
 \keyword{datasets}
