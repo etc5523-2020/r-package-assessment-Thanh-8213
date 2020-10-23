@@ -7,64 +7,30 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+## App Introduction 
 
-## Data description
-This packages contain a dashboard shows recent development of the COVID19 pandemic. ]
+### What the shiny app does
+This dashboard shows the status of the COVID19 virus across the world. It gives the user the opportunity to view the spreading of the Great Pandemic. The map provides worldwide view of the disease while detailed information of each country is demonstrated by the data table. 
+The app also illustrates the evolution of the virus by two plots in plots tab.
 
-This package contain 2 dataset: `data_total` and `data_total_newdaily`. The data is downloaded from [Johns HopkinsCSSE](https://github.com/CSSEGISandData/COVID-19a). Both datasets contain the information about the spreading of the COVID19 pandemic. 
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.width = 6.5
-)
+### Instruction on launching the app
+First, you need to install the package using 
+``` r
+# install.packages("devtools")
+devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
 ```
+Then, you can use the function `launch_app()` to launch the shiny app. This can be done by typing `launch_app()` in the console.
 
-```{r setup}
-library(icecovid19)
-library(tibble)
-library(ggplot2)
-library(dplyr)
+### Instruction on how using the app 
 
-```
+1. The first tab you will see is the overview tab. It contains a slider, a bubble map and a summary datatable. 
+The slider control the date at which the data is recorded. You can change it to understand how the virus spread overtime. The map will provide the name of the country, the number of confirmed cases, number of deaths and number of recovered cases when you hover your mouse on the bubble. 
+The datatable gives detailed number of number of confirmed cases, number of deaths and number of recovered cases, in case you can not find the data you needed on the map. 
 
-### data_total dataset
+2. The second tab you will see is the Plots tab. It contains two plots and one box.
+The first plot is "Overall trend of COVID19". You can hover your mouse on the graph to get further information.  
+The second plot is "Evolution of COVID19 per criteria". Together with it comes a select box. You can explore detailed information about a certain type of cases by selecting in this box. You can hover your mouse on the graph to get detailed information. 
+You can click the first plot for a little surprise ;)
+3. The third tab is About tab. 
+It contains information of the author and the purpose of the app. Nothing special there ;)
 
-data_total is a dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020, along with the latitude and longitude of the region in which cases were recorded.  
-There are 3 type of cases: Confirmed, deceased and recoveredIt can be accessed via 
-```{r}
-library(icecovid19)
-as_tibble(data_total)
-```
-
-#### Exploration of the data
-
-Evolution of the pandemic in Australia
-
-```{r}
-data_total %>% filter(`Country/Region` == "Australia") %>%
-  ggplot(aes(x = date, y = confirmed))+
-  geom_line(color = "steelblue", alpha = 0.7, size = 2)+
-  ggtitle("Evolution of COVID19 in Australia")+
-  xlab("Date")+
-  ylab("Confirmed cases (person)")+
-  theme_bw()
-```
-
-### data_total_newdaily
-Data for new cases of COVID19 from 22/01/2020 to 06/10/2020
- 
-A dataset contains the number of COVID19 cases worldwide from 22/01/2020 to 06/10/2020. Data is in longer format, with variable var contains 6 types of cases: Confirmed, deceased, recovered, new daily confirmed, new daily death and new daily recovered.
-
-
-#### Exploration of the data
-```{r}
-data_total_newdaily %>% filter(`Country/Region` == "Australia") %>%
-  ggplot(aes(x = date, y = value, color = var))+
-  geom_line()+
-  ggtitle("Evolution of COVID19 in Australia")+
-  xlab("Date")+
-  ylab("Confirmed cases (person)")+
-  theme_bw()
-```

@@ -7,11 +7,13 @@
 
 <!-- badges: end -->
 
-The goal of icecovid19 is to …
+The goal of the package is to deploy a shiny app and the data and
+functions required for the app to run.
 
 ## Installation
 
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -23,12 +25,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
 ### Dataset example: Data\_total
 
 ``` r
-as.tibble(data_total)
-#> Warning: `as.tibble()` is deprecated as of tibble 2.0.0.
-#> Please use `as_tibble()` instead.
-#> The signature and semantics have changed, see `?as_tibble`.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_warnings()` to see where this warning was generated.
+as_tibble(data_total)
 #> # A tibble: 48,692 x 7
 #>    `Country/Region` date         Lat  Long confirmed deceased recovered
 #>    <chr>            <date>     <dbl> <dbl>     <dbl>    <dbl>     <dbl>
@@ -75,4 +72,4 @@ as_tibble(summariseData(data_total, date))
 getSummaryDT(data_total, `Country/Region`)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-function 2-1.png" width="100%" />

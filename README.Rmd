@@ -24,12 +24,11 @@ library(DT)
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of icecovid19 is to ...
+The goal of the package is to deploy a shiny app and the data and functions required for the app to run. 
 
 ## Installation
 
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -38,22 +37,22 @@ devtools::install_github("etc5523-2020/r-package-assessment-Thanh-8213")
 ## Examples
 
 ### Dataset example: Data_total
-```{r data}
-as.tibble(data_total)
+```{r data, warning = FALSE}
+as_tibble(data_total)
 ```
 
 ### Function example
 Here are some example of the functions in this package:
 
 #### summariseData function
-```{r}
+```{r function 1, warning = FALSE}
 as_tibble(summariseData(data_total, date))
 ```
 
 #### getSummaryDT function
 
 
-```{r}
+```{r function 2, warning = FALSE}
 getSummaryDT(data_total, `Country/Region`)
 ```
 

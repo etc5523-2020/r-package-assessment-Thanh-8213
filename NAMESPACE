@@ -2,6 +2,7 @@
 
 export(addLabel)
 export(getSummaryDT)
+export(launch_app)
 export(sliderDateinput)
 export(summariseData)
 export(summariseData_newdaily)
