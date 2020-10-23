@@ -45,14 +45,14 @@ as_tibble(data_total)
 Here are some example of the functions in this package:
 
 #### summariseData function
-```{r function 1, warning = FALSE}
+```{r function1, warning = FALSE}
 as_tibble(summariseData(data_total, date))
 ```
 
 #### getSummaryDT function
 
 
-```{r function 2, warning = FALSE}
+```{r function2, warning = FALSE}
 getSummaryDT(data_total, `Country/Region`)
 ```
 

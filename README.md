@@ -72,4 +72,4 @@ as_tibble(summariseData(data_total, date))
 getSummaryDT(data_total, `Country/Region`)
 ```
 
-<img src="man/figures/README-function 2-1.png" width="100%" />
+<img src="man/figures/README-function2-1.png" width="100%" />
